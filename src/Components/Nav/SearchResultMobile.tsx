@@ -33,7 +33,7 @@ const SearchResultMobile = (props: SearchResultProps) => {
 };
 
 const Container = styled.ul`
-	padding: 16px 0;
+	padding: 16px 12px;
 	z-index: 1002;
 	background-color: ${(props: { bgc: string }) => props.bgc};
 `;
