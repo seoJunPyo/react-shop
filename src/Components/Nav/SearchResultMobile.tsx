@@ -1,0 +1,55 @@
+import styled from '@emotion/styled';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useRecoilState } from 'recoil';
+import { hoverStyle, resultBgc } from '../../assets/Style/darkLightColor';
+import { darkLightModeAtom } from '../../Atom/AtomStore';
+import { ShoppingListType } from '../../Type/Type';
+
+interface SearchResultProps {
+	result: ShoppingListType[];
+	reset: () => void;
+}
+
+const SearchResultMobile = (props: SearchResultProps) => {
+	const navigate = useNavigate();
+	const [darkLightMode] = useRecoilState(darkLightModeAtom);
+
+	return (
+		<Container bgc={resultBgc(darkLightMode)}>
+			{props.result.map((result) => (
+				<Result
+					hover={hoverStyle(darkLightMode)}
+					key={result.title}
+					onClick={() => {
+						navigate(`/item/${result.id}`);
+						props.reset();
+					}}>
+					{result.title}
+				</Result>
+			))}
+		</Container>
+	);
+};
+
+const Container = styled.div`
+	z-index: 20000;
+	background-color: ${(props: { bgc: string }) => props.bgc};
+`;
+const Result = styled.div`
+	padding: 16px;
+	margin-bottom: 4px;
+	border-radius: 10px;
+	cursor: pointer;
+
+	:hover {
+		background-color: ${(props: { hover: string }) => props.hover};
+		transition: background-color 0.3s;
+	}
+
+	:last-of-type {
+		margin-bottom: 0;
+	}
+`;
+
+export default SearchResultMobile;
