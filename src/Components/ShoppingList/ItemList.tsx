@@ -4,7 +4,6 @@ import styled from '@emotion/styled';
 import ItemCard from './ItemCard';
 //type
 import { ShoppingListType } from '../../Type/Type';
-import { textColor } from '../../assets/Style/CommonStyle';
 
 interface ItemListProps {
 	key?: string;

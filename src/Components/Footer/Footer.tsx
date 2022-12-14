@@ -1,7 +1,7 @@
 import React from 'react';
 //style
 import styled from '@emotion/styled';
-import { CommonWidth, textColor } from '../../assets/Style/CommonStyle';
+import { CommonWidth } from '../../assets/Style/CommonStyle';
 //component
 import CardArea from './CardArea';
 import SNSIconArea from './SNSIconArea';

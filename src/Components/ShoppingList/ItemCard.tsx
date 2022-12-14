@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 //style
-import { FlexTemplate, textColor } from '../../assets/Style/CommonStyle';
+import { FlexTemplate } from '../../assets/Style/CommonStyle';
 //type
 import { ShoppingListType } from '../../Type/Type';
 import { cardBgc, cardBorder } from '../../assets/Style/darkLightColor';
@@ -36,7 +36,7 @@ export const Card = styled.div`
 	overflow: hidden;
 	margin: 0 12px 24px;
 	min-width: 210px;
-	border: ${(props: { border: string }) => props.border};
+	border: ${(props: { border?: string }) => props.border};
 	transition: border 0.3s;
 
 	@media (max-width: 1024px) {
@@ -68,7 +68,7 @@ export const Img = styled.img`
 export const Info = styled.div`
 	padding: 32px;
 	height: 224px;
-	background-color: ${(props: { bgc: string }) => props.bgc};
+	background-color: ${(props: { bgc?: string }) => props.bgc};
 	text-align: left;
 	line-height: 1.5;
 	transition: background-color 0.3s;
