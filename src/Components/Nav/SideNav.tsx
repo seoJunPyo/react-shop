@@ -48,7 +48,7 @@ const Wrap = styled.div`
 	height: 100vh;
 	background-color: rgba(0, 0, 0, 0.2);
 
-	z-index: 101;
+	z-index: 1001;
 `;
 
 const Nav = styled.ul`
@@ -58,7 +58,7 @@ const Nav = styled.ul`
 	width: 300px;
 	padding: 12px 24px;
 	background-color: inherit;
-	z-index: 1001;
+	z-index: 1002;
 	transition: left 0.3s;
 `;
 

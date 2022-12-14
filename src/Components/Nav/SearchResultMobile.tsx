@@ -32,11 +32,12 @@ const SearchResultMobile = (props: SearchResultProps) => {
 	);
 };
 
-const Container = styled.div`
-	z-index: 20000;
+const Container = styled.ul`
+	padding: 16px 0;
+	z-index: 1002;
 	background-color: ${(props: { bgc: string }) => props.bgc};
 `;
-const Result = styled.div`
+const Result = styled.li`
 	padding: 16px;
 	margin-bottom: 4px;
 	border-radius: 10px;
@@ -44,7 +45,7 @@ const Result = styled.div`
 
 	:hover {
 		background-color: ${(props: { hover: string }) => props.hover};
-		transition: background-color 0.3s;
+		transition: background-color 0.2s;
 	}
 
 	:last-of-type {

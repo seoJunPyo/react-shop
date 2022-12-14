@@ -32,7 +32,7 @@ const SearchResult = (props: SearchResultProps) => {
 	);
 };
 
-const Container = styled.div`
+const Container = styled.ul`
 	position: absolute;
 	top: calc(100% + 12px);
 	width: 250px;
@@ -42,7 +42,7 @@ const Container = styled.div`
 	z-index: 1000;
 `;
 
-const Result = styled.p`
+const Result = styled.li`
 	margin-bottom: 4px;
 	padding: 12px;
 	font-size: 14px;
@@ -55,7 +55,7 @@ const Result = styled.p`
 
 	:hover {
 		background-color: ${(props: { hover: string }) => props.hover};
-		transition: background-color 0.3s;
+		transition: background-color 0.2s;
 	}
 `;
 
