@@ -13,7 +13,7 @@ export const handleAmount = (
 	const findIdx = list.findIndex((item) => item.id.toString() === id);
 
 	if (!find) return;
-	if (find.amount <= 0) {
+	if (find.amount <= 1 && count < 0) {
 		return removeItem(id, list);
 	}
 

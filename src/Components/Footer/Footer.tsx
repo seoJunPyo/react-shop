@@ -30,6 +30,7 @@ interface FooterStyle {
 }
 
 const Container = styled.footer`
+	width: 100%;
 	background-color: ${(props: FooterStyle) => props.bgc};
 	color: ${(props) => props.color};
 	text-align: center;

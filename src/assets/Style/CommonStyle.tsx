@@ -37,6 +37,7 @@ export const PageContainer = `
 	${CommonWidth}
 	padding: 12px 16px 32px;
 	margin: 12px auto;
+  min-height : calc(100vh - 366px)
 `;
 
 export const WrapStyle = `
