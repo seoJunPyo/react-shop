@@ -11,7 +11,7 @@ import ItemList from '../Components/ShoppingList/ItemList';
 import LoadingPage from './LoadingPage';
 import CategoryBar from '../Components/Common/CategoryBar';
 //i style
-import { PageContainer } from '../assets/Style/CommonStyle';
+import { PageContainer } from '../assets/style/CommonStyle';
 
 interface CategoryPage {
 	isLoading: boolean;

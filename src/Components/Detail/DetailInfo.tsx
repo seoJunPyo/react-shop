@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 //style
 import NewBadge from '../Common/NewBadge';
-import { FlexTemplate } from '../../assets/Style/CommonStyle';
+import { FlexTemplate } from '../../assets/style/CommonStyle';
 //component
 import StarRating from './StarRating';
 import DetailBtn from './DetailBtn';

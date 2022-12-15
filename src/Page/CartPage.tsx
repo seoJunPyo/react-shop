@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import React, { useEffect, useState } from 'react';
 import { useRecoilState } from 'recoil';
 //style
-import { PageContainer } from '../assets/Style/CommonStyle';
+import { PageContainer } from '../assets/style/CommonStyle';
 //component
 import CategoryBar from '../Components/Common/CategoryBar';
 import CartItem from '../Components/Cart/CartItem';

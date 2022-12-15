@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { useRecoilState } from 'recoil';
 //style
 import { Container } from '../Components/ShoppingList/ShoppingList';
-import { cardBgc, cardBorder } from '../assets/Style/darkLightColor';
+import { cardBgc, cardBorder } from '../assets/style/darkLightColor';
 //img
 import loadingDark from '../assets/Image/Loading_dark.gif';
 import loadingLight from '../assets/Image/Loading_light.gif';

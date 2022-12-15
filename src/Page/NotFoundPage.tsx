@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import React, { useState, useEffect } from 'react';
-import { PageContainer } from '../assets/Style/CommonStyle';
+import { PageContainer } from '../assets/style/CommonStyle';
 import { MdSdCardAlert } from 'react-icons/md';
 import { GreyButton } from '../Components/Common/Button';
 import { useNavigate } from 'react-router-dom';

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Rating } from '@mui/material';
 import styled from '@emotion/styled';
-import { FlexTemplate } from '../../assets/Style/CommonStyle';
+import { FlexTemplate } from '../../assets/style/CommonStyle';
 
 interface StarRatingProps {
 	rate: {

@@ -1,13 +1,13 @@
 import React from 'react';
 //style
 import styled from '@emotion/styled';
-import { CommonWidth } from '../../assets/Style/CommonStyle';
+import { CommonWidth } from '../../assets/style/CommonStyle';
 //component
 import CardArea from './CardIconArea';
 import SNSIconArea from './SNSIconArea';
 import { useRecoilState } from 'recoil';
 import { darkLightModeAtom } from '../../Atom/AtomStore';
-import { footerBgc, footerText } from '../../assets/Style/darkLightColor';
+import { footerBgc, footerText } from '../../assets/style/darkLightColor';
 
 const Footer = () => {
 	const [darkLightMode] = useRecoilState(darkLightModeAtom);

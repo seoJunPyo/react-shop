@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useRecoilState } from 'recoil';
 //style icon
 import styled from '@emotion/styled';
-import { CarouselHandleBtn } from '../../assets/Style/CommonStyle';
+import { CarouselHandleBtn } from '../../assets/style/CommonStyle';
 import { IoMdArrowDropright, IoMdArrowDropleft } from 'react-icons/io';
 //component
 import CarouselMain from './CarouselMain';

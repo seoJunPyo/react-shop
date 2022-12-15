@@ -7,7 +7,7 @@ import { cartListAtom } from '../../Atom/AtomStore';
 import { handleAmount } from './handleCartList';
 //style
 import { Btn } from '../Common/Button';
-import { FlexTemplate } from '../../assets/Style/CommonStyle';
+import { FlexTemplate } from '../../assets/style/CommonStyle';
 
 interface AmountBtnProps {
 	id: number;

@@ -11,7 +11,7 @@ import DetailImg from '../Components/Detail/DetailImg';
 import DetailInfo from '../Components/Detail/DetailInfo';
 import CategoryBar from '../Components/Common/CategoryBar';
 //style
-import { PageContainer } from '../assets/Style/CommonStyle';
+import { PageContainer } from '../assets/style/CommonStyle';
 
 const DetailPage = () => {
 	const { id } = useParams();

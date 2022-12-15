@@ -6,12 +6,12 @@ import NavHeader from './NavHeader';
 import NavInputArea from './NavInputArea';
 import SideNav from './SideNav';
 //style
-import { CommonWidth, FlexTemplate } from '../../assets/Style/CommonStyle';
+import { CommonWidth, FlexTemplate } from '../../assets/style/CommonStyle';
 import {
 	navBgc,
 	navBoxShadow,
 	navText,
-} from '../../assets/Style/darkLightColor';
+} from '../../assets/style/darkLightColor';
 //data
 import { darkLightModeAtom } from '../../Atom/AtomStore';
 
@@ -56,7 +56,7 @@ const Wrap = styled.div`
 	${CommonWidth}
 	${FlexTemplate}
 	justify-content : space-between;
-	padding: 8px 40px;
+	padding: 8px 32px;
 
 	@media (max-width: 968px) {
 		padding: 8px 12px;

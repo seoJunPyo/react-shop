@@ -3,8 +3,9 @@ import { Routes, Route } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
 import axios from 'axios';
 import useSWR from 'swr';
+import styled from '@emotion/styled';
 //type
-import { CartType, ShoppingListType } from './Type/dataType';
+import { ShoppingListType } from './Type/dataType';
 //component & page
 import Nav from './Components/Nav/Nav';
 import Footer from './Components/Footer/Footer';
@@ -21,9 +22,7 @@ import {
 } from './Atom/AtomStore';
 //css
 import './App.css';
-import { useMemo } from 'react';
-import styled from '@emotion/styled';
-import { bodyBgc, bodyText } from './assets/Style/darkLightColor';
+import { bodyBgc, bodyText } from './assets/style/darkLightColor';
 
 function App() {
 	const [_, setShoppingList] = useRecoilState(shoppingListAtom);

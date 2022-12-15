@@ -1,12 +1,12 @@
 import styled from '@emotion/styled';
 import React from 'react';
 import { useRecoilState } from 'recoil';
-import { WrapStyle } from '../../assets/Style/CommonStyle';
+import { WrapStyle } from '../../assets/style/CommonStyle';
 import {
 	bodyBgc,
 	bodyText,
 	modalShadow,
-} from '../../assets/Style/darkLightColor';
+} from '../../assets/style/darkLightColor';
 import { cartListAtom, darkLightModeAtom } from '../../Atom/AtomStore';
 import { GreyButton, PurpleButton } from './Button';
 

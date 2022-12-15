@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { useNavigate } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
 //style
-import { hoverStyle, resultBgc } from '../../assets/Style/darkLightColor';
+import { hoverStyle, resultBgc } from '../../assets/style/darkLightColor';
 //type
 import { ShoppingListType } from '../../Type/dataType';
 //data

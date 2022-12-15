@@ -3,8 +3,8 @@ import styled from '@emotion/styled';
 import { useNavigate } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
 //style icon
-import { FlexTemplate } from '../../assets/Style/CommonStyle';
-import { hoverStyle } from '../../assets/Style/darkLightColor';
+import { FlexTemplate } from '../../assets/style/CommonStyle';
+import { hoverStyle } from '../../assets/style/darkLightColor';
 import { HiOutlineViewList } from 'react-icons/hi';
 //data
 import {
@@ -98,7 +98,7 @@ const List = styled.ul`
 
 const Item = styled.li<{ hover: string }>`
 	${FlexTemplate}
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: 600;
 	border-radius: 10px;
 	cursor: pointer;

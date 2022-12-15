@@ -5,7 +5,7 @@ import {
 	btnColor,
 	btnHoverBgc,
 	btnHoverColor,
-} from '../../assets/Style/darkLightColor';
+} from '../../assets/style/darkLightColor';
 import { darkLightModeAtom } from '../../Atom/AtomStore';
 
 interface BtnProps {

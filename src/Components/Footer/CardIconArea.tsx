@@ -10,7 +10,7 @@ import {
 	Visa,
 } from '../../assets/Icon/Icons';
 //style
-import { FlexTemplate } from '../../assets/Style/CommonStyle';
+import { FlexTemplate } from '../../assets/style/CommonStyle';
 
 const CardArea = () => {
 	return (

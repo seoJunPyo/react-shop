@@ -3,7 +3,7 @@ import React from 'react';
 //icons
 import { FaFacebookF, FaGithub } from 'react-icons/fa';
 import { FiInstagram } from 'react-icons/fi';
-import { FlexTemplate } from '../../assets/Style/CommonStyle';
+import { FlexTemplate } from '../../assets/style/CommonStyle';
 
 const SNSIconArea = () => {
 	return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlexTemplate } from '../../assets/Style/CommonStyle';
+import { FlexTemplate } from '../../assets/style/CommonStyle';
 import styled from '@emotion/styled';
 
 interface DetailImgProps {

@@ -2,10 +2,10 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { Link, useNavigate } from 'react-router-dom';
 //style
-import { FlexTemplate } from '../../assets/Style/CommonStyle';
+import { FlexTemplate } from '../../assets/style/CommonStyle';
 //type
 import { ShoppingListType } from '../../Type/dataType';
-import { cardBgc, cardBorder } from '../../assets/Style/darkLightColor';
+import { cardBgc, cardBorder } from '../../assets/style/darkLightColor';
 import { useRecoilState } from 'recoil';
 import { darkLightModeAtom } from '../../Atom/AtomStore';
 
@@ -83,5 +83,7 @@ export const Name = styled.p`
 	margin-bottom: 24px;
 `;
 
-const Price = styled.p``;
+const Price = styled.p`
+	font-size: 20px;
+`;
 export default ItemCard;

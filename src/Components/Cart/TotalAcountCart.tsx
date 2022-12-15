@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useRecoilState } from 'recoil';
 //style
 import styled from '@emotion/styled';
-import { WrapStyle } from '../../assets/Style/CommonStyle';
+import { WrapStyle } from '../../assets/style/CommonStyle';
 //componetn
 import { GreyButton, PurpleButton } from '../Common/Button';
 import Modal from '../Common/Modal';

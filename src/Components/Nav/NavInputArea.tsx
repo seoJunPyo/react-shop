@@ -5,8 +5,8 @@ import { useRecoilState } from 'recoil';
 //style icon
 import { BiShoppingBag } from 'react-icons/bi';
 import { BsSun, BsMoon } from 'react-icons/bs';
-import { Button, FlexTemplate } from '../../assets/Style/CommonStyle';
-import { hoverStyle } from '../../assets/Style/darkLightColor';
+import { Button, FlexTemplate } from '../../assets/style/CommonStyle';
+import { hoverStyle } from '../../assets/style/darkLightColor';
 //component
 import NavInput from './NavInput';
 //handler

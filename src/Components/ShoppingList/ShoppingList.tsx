@@ -8,7 +8,7 @@ import ItemList from './ItemList';
 //type
 import { ShoppingListType } from '../../Type/dataType';
 //style
-import { CommonWidth } from '../../assets/Style/CommonStyle';
+import { CommonWidth } from '../../assets/style/CommonStyle';
 
 const ShoppingList = () => {
 	const [shoppingList] = useRecoilState(shoppingListAtom);

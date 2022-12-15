@@ -4,12 +4,12 @@ import { useRecoilState } from 'recoil';
 // style
 import styled from '@emotion/styled';
 import { BiRightArrowAlt } from 'react-icons/bi';
-import { CommonWidth, FlexTemplate } from '../../assets/Style/CommonStyle';
+import { CommonWidth, FlexTemplate } from '../../assets/style/CommonStyle';
 import {
 	carouselBtn,
 	carouselHover,
 	carouselText,
-} from '../../assets/Style/darkLightColor';
+} from '../../assets/style/darkLightColor';
 //data
 import { darkLightModeAtom } from '../../Atom/AtomStore';
 
@@ -83,7 +83,7 @@ const TextBox = styled.div`
 `;
 
 const Title = styled.h2`
-	font-size: 28px;
+	font-size: 32px;
 	font-weight: 700;
 	margin-bottom: 12px;
 
@@ -92,7 +92,7 @@ const Title = styled.h2`
 	}
 `;
 const Desc = styled.p`
-	font-size: 14px;
+	font-size: 16px;
 
 	@media (max-width: 576px) {
 		font-size: 12px;
@@ -112,7 +112,7 @@ const Button = styled.button<CarouselStyle>`
 	border-radius: 5px;
 	color: ${(props) => props.color};
 	font-weight: 600;
-	font-size: 12px;
+	font-size: 14px;
 	cursor: pointer;
 
 	svg {

@@ -9,9 +9,9 @@ import {
 	Button,
 	FlexTemplate,
 	WrapStyle,
-} from '../../assets/Style/CommonStyle';
+} from '../../assets/style/CommonStyle';
 import { BiSearch } from 'react-icons/bi';
-import { hoverStyle, inputBgc } from '../../assets/Style/darkLightColor';
+import { hoverStyle, inputBgc } from '../../assets/style/darkLightColor';
 //type
 import { ShoppingListType } from '../../Type/dataType';
 //handler

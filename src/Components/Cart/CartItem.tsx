@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 //style
 import styled from '@emotion/styled';
-import { FlexTemplate } from '../../assets/Style/CommonStyle';
+import { FlexTemplate } from '../../assets/style/CommonStyle';
 //component
 import AmountBtn from './AmountBtn';
 //type

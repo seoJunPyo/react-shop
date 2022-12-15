@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;400;500;600;700;800;900&display=swap');
+
 /* reset **/
 * {
 	margin: 0;
@@ -21,10 +23,6 @@ menu,
 nav,
 section {
 	display: block;
-}
-body {
-	line-height: 1;
-	height: 100%;
 }
 ol,
 ul {
@@ -51,4 +49,14 @@ a {
 }
 .MuiRating-iconFilled {
 	color: #facc15;
+}
+body {
+	line-height: 1;
+	height: 100%;
+	font-family: 'Kanit', sans-serif;
+	letter-spacing: 0.02rem;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
