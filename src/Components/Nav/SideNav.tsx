@@ -1,9 +1,10 @@
-import styled from '@emotion/styled';
 import React from 'react';
+import styled from '@emotion/styled';
 import { useNavigate } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
-
+//style
 import { hoverStyle } from '../../assets/Style/darkLightColor';
+//data
 import {
 	categoryListAtom,
 	darkLightModeAtom,
@@ -41,9 +42,9 @@ const SideNav = () => {
 	);
 };
 
-const Wrap = styled.div`
+const Wrap = styled.div<{ display: string }>`
 	position: fixed;
-	display: ${(props: { display: string }) => props.display};
+	display: ${(props) => props.display};
 	width: 100vw;
 	height: 100vh;
 	background-color: rgba(0, 0, 0, 0.2);
@@ -51,9 +52,9 @@ const Wrap = styled.div`
 	z-index: 1001;
 `;
 
-const Nav = styled.ul`
+const Nav = styled.ul<{ position: string }>`
 	position: fixed;
-	left: ${(props: { position: string }) => props.position};
+	left: ${(props) => props.position};
 	height: 100vh;
 	width: 300px;
 	padding: 12px 24px;
@@ -62,7 +63,7 @@ const Nav = styled.ul`
 	transition: left 0.3s;
 `;
 
-const Item = styled.li`
+const Item = styled.li<{ hover: string }>`
 	padding: 12px;
 	margin-bottom: 8px;
 	border-radius: 10px;
@@ -71,7 +72,7 @@ const Item = styled.li`
 	cursor: pointer;
 
 	:hover {
-		background-color: ${(props: { hover: string }) => props.hover};
+		background-color: ${(props) => props.hover};
 		transition: background-color 0.3s;
 	}
 `;

@@ -4,12 +4,13 @@ import styled from '@emotion/styled';
 
 interface DetailImgProps {
 	img: string;
+	alt: string;
 }
 
 const DetailImg = (props: DetailImgProps) => {
 	return (
 		<ImgCon>
-			<img src={props.img} alt="" />
+			<img src={props.img} alt={props.alt} />
 		</ImgCon>
 	);
 };

@@ -1,13 +1,17 @@
-import styled from '@emotion/styled';
 import React from 'react';
+import styled from '@emotion/styled';
+import { useRecoilState } from 'recoil';
+//style
 import { Container } from '../Components/ShoppingList/ShoppingList';
+import { cardBgc, cardBorder } from '../assets/Style/darkLightColor';
+//img
+import loadingDark from '../assets/Image/Loading_dark.gif';
+import loadingLight from '../assets/Image/Loading_light.gif';
+//component
 import { Title, List } from '../Components/ShoppingList/ItemList';
 import { ImgCon, Card, Info } from '../Components/ShoppingList/ItemCard';
-import loadingLight from '../assets/Image/Loading_light.gif';
-import loadingDark from '../assets/Image/Loading_dark.gif';
+//data
 import { darkLightModeAtom } from '../Atom/AtomStore';
-import { useRecoilState } from 'recoil';
-import { cardBgc, cardBorder } from '../assets/Style/darkLightColor';
 
 interface LoadingPageProps {
 	length: number;

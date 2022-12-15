@@ -58,10 +58,10 @@ interface BtnGrayStyle {
 	border: string;
 }
 
-const BtnGray = styled.button`
+const BtnGray = styled.button<BtnGrayStyle>`
 	${Btn}
 	background: none;
-	border: ${(props: BtnGrayStyle) => props.border};
+	border: ${(props) => props.border};
 	color: ${(props) => props.color};
 
 	:hover {

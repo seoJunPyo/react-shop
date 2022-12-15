@@ -4,7 +4,7 @@ import { useRecoilState } from 'recoil';
 import axios from 'axios';
 import useSWR from 'swr';
 //type
-import { CartType, ShoppingListType } from './Type/Type';
+import { CartType, ShoppingListType } from './Type/dataType';
 //component & page
 import Nav from './Components/Nav/Nav';
 import Footer from './Components/Footer/Footer';
@@ -26,8 +26,8 @@ import styled from '@emotion/styled';
 import { bodyBgc, bodyText } from './assets/Style/darkLightColor';
 
 function App() {
-	const [shoppingList, setShoppingList] = useRecoilState(shoppingListAtom);
-	const [categoryList, setCategoryList] = useRecoilState(categoryListAtom);
+	const [_, setShoppingList] = useRecoilState(shoppingListAtom);
+	const [__, setCategoryList] = useRecoilState(categoryListAtom);
 	const [darkLigthMode] = useRecoilState(darkLightModeAtom);
 
 	const getCategory = (target: []) => {
@@ -70,8 +70,8 @@ interface BodyStyle {
 	bgc: string;
 }
 
-const Body = styled.div`
-	background-color: ${(props: BodyStyle) => props.bgc};
+const Body = styled.div<BodyStyle>`
+	background-color: ${(props) => props.bgc};
 	color: ${(props) => props.color};
 	transition: all 0.3s;
 `;

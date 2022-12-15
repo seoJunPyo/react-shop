@@ -6,7 +6,7 @@ import { shoppingListAtom, categoryListAtom } from '../../Atom/AtomStore';
 //conponents
 import ItemList from './ItemList';
 //type
-import { ShoppingListType } from '../../Type/Type';
+import { ShoppingListType } from '../../Type/dataType';
 //style
 import { CommonWidth } from '../../assets/Style/CommonStyle';
 

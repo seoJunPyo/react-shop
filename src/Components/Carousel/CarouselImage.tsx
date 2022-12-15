@@ -1,13 +1,16 @@
-import styled from '@emotion/styled';
-import { BiRightArrowAlt } from 'react-icons/bi';
+import react from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
+// style
+import styled from '@emotion/styled';
+import { BiRightArrowAlt } from 'react-icons/bi';
 import { CommonWidth, FlexTemplate } from '../../assets/Style/CommonStyle';
 import {
 	carouselBtn,
 	carouselHover,
 	carouselText,
 } from '../../assets/Style/darkLightColor';
+//data
 import { darkLightModeAtom } from '../../Atom/AtomStore';
 
 interface CarouselImageProps {
@@ -101,11 +104,11 @@ const Img = styled.img`
 	object-position: center;
 `;
 
-const Button = styled.button`
+const Button = styled.button<CarouselStyle>`
 	${FlexTemplate}
 	margin-top: 20px;
 	padding: 12px 10px 12px 12px;
-	background-color: ${(props: CarouselStyle) => props.bgc};
+	background-color: ${(props) => props.bgc};
 	border-radius: 5px;
 	color: ${(props) => props.color};
 	font-weight: 600;

@@ -1,27 +1,26 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
-import { BiSearch, BiShoppingBag } from 'react-icons/bi';
-import { BsSun, BsMoon } from 'react-icons/bs';
-import { Link, useNavigate } from 'react-router-dom';
-import { Button, FlexTemplate } from '../../assets/Style/CommonStyle';
+import { useNavigate } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
-import { cartListAtom, darkLightModeAtom } from '../../Atom/AtomStore';
-import { getTotalAmount } from '../Cart/CartListHandler';
-import NavInput from './NavInput';
+//style icon
+import { BiShoppingBag } from 'react-icons/bi';
+import { BsSun, BsMoon } from 'react-icons/bs';
+import { Button, FlexTemplate } from '../../assets/Style/CommonStyle';
 import { hoverStyle } from '../../assets/Style/darkLightColor';
+//component
+import NavInput from './NavInput';
+//handler
+import { getTotalAmount } from '../Cart/handleCartList';
+//data
+import { cartListAtom, darkLightModeAtom } from '../../Atom/AtomStore';
 
 const NavInputArea = () => {
 	const [cartList] = useRecoilState(cartListAtom);
-	const [mobileInputState, setMobileInputState] = useState(false);
 	const navigate = useNavigate();
 	const [darkLightMode, setDarkLightMode] = useRecoilState(darkLightModeAtom);
 
 	const toCart = () => {
 		navigate('/cart');
-	};
-
-	const closeMobileInput = () => {
-		setMobileInputState(false);
 	};
 
 	return (
@@ -32,7 +31,6 @@ const NavInputArea = () => {
 				}}>
 				{darkLightMode ? <BsSun /> : <BsMoon />}
 			</DarkLightModeBtn>
-
 			<InputDiv>
 				<NavInput />
 			</InputDiv>
@@ -55,7 +53,7 @@ const DarkLightModeBtn = styled.button`
 	${Button}
 `;
 
-const CartBtn = styled.button`
+const CartBtn = styled.button<{ hover: string }>`
 	position: relative;
 	padding: 12px;
 	border-radius: 10px;
@@ -63,7 +61,7 @@ const CartBtn = styled.button`
 	${Button}
 
 	:hover {
-		background-color: ${(props: { hover: string }) => props.hover};
+		background-color: ${(props) => props.hover};
 		transition: background-color 0.3s;
 	}
 `;

@@ -1,10 +1,13 @@
-import styled from '@emotion/styled';
 import React from 'react';
+import styled from '@emotion/styled';
 import { useNavigate } from 'react-router-dom';
-import { ShoppingListType } from '../../Type/Type';
 import { useRecoilState } from 'recoil';
-import { darkLightModeAtom } from '../../Atom/AtomStore';
+//style
 import { hoverStyle, resultBgc } from '../../assets/Style/darkLightColor';
+//type
+import { ShoppingListType } from '../../Type/dataType';
+//data
+import { darkLightModeAtom } from '../../Atom/AtomStore';
 
 interface SearchResultProps {
 	result: ShoppingListType[];
@@ -32,17 +35,17 @@ const SearchResult = (props: SearchResultProps) => {
 	);
 };
 
-const Container = styled.ul`
+const Container = styled.ul<{ bgc: string }>`
 	position: absolute;
 	top: calc(100% + 12px);
 	width: 250px;
 	padding: 6px 12px;
-	background-color: ${(props: { bgc: string }) => props.bgc};
+	background-color: ${(props) => props.bgc};
 	border-radius: 0 0 10px 10px;
 	z-index: 1000;
 `;
 
-const Result = styled.li`
+const Result = styled.li<{ hover: string }>`
 	margin-bottom: 4px;
 	padding: 12px;
 	font-size: 14px;
@@ -54,7 +57,7 @@ const Result = styled.li`
 	}
 
 	:hover {
-		background-color: ${(props: { hover: string }) => props.hover};
+		background-color: ${(props) => props.hover};
 		transition: background-color 0.2s;
 	}
 `;

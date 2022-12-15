@@ -1,9 +1,13 @@
-import styled from '@emotion/styled';
 import React, { useState } from 'react';
+//style
+import styled from '@emotion/styled';
 import { FlexTemplate } from '../../assets/Style/CommonStyle';
+//component
 import AmountBtn from './AmountBtn';
-import { CartType } from '../../Type/Type';
-import { priceFormeter } from './CartListHandler';
+//type
+import { CartType } from '../../Type/dataType';
+//handler
+import { priceFormeter } from './handleCartList';
 
 interface CardItemProps {
 	itemInfo: CartType;

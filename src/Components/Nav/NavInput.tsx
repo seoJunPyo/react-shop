@@ -1,24 +1,28 @@
 import styled from '@emotion/styled';
-import { grey } from '@mui/material/colors';
-import React, { useEffect, useState, useRef, LegacyRef } from 'react';
-import { BiSearch } from 'react-icons/bi';
-import { useParams } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
+import React, { useEffect, useState } from 'react';
+//component
+import SearchResult from './SearchResult';
+import SearchResultMobile from './SearchResultMobile';
+//style icon
 import {
 	Button,
 	FlexTemplate,
 	WrapStyle,
 } from '../../assets/Style/CommonStyle';
+import { BiSearch } from 'react-icons/bi';
 import { hoverStyle, inputBgc } from '../../assets/Style/darkLightColor';
+//type
+import { ShoppingListType } from '../../Type/dataType';
+//handler
+import { getSearchResult } from './handleInput';
+//data
 import { darkLightModeAtom, shoppingListAtom } from '../../Atom/AtomStore';
-import { ShoppingListType } from '../../Type/Type';
-import { getSearchResult } from './getSearchReesult';
-import SearchResult from './SearchResult';
-import SearchResultMobile from './SearchResultMobile';
 
 const NavInput = () => {
 	const [shoppingList] = useRecoilState(shoppingListAtom);
 	const [darkLightMode] = useRecoilState(darkLightModeAtom);
+
 	const [searchKeyword, setserchKeyword] = useState('');
 	const [result, setResult] = useState<ShoppingListType[]>([]);
 	const [mobileInputState, setMobileInputState] = useState(false);
@@ -90,14 +94,14 @@ interface MobileInputStyle {
 	display: string;
 }
 
-const SearchBtn = styled.button`
+const SearchBtn = styled.button<{ hover: string }>`
 	padding: 12px;
 	border-radius: 10px;
 	${Button}
 	${FlexTemplate}
 	
 	:hover {
-		background-color: ${(props: { hover: string }) => props.hover};
+		background-color: ${(props) => props.hover};
 		transition: background-color 0.3s;
 	}
 
@@ -112,11 +116,11 @@ const InputCon = styled.div`
 	}
 `;
 
-const Input = styled.input`
+const Input = styled.input<{ bgc: string }>`
 	width: 200px;
 	padding: 12px;
 	margin: 0 4px;
-	background-color: ${(props: { bgc: string }) => props.bgc};
+	background-color: ${(props) => props.bgc};
 	border-radius: 5px;
 	color: inherit;
 	font-size: 12px;
@@ -129,20 +133,20 @@ const Input = styled.input`
 	}
 `;
 
-const Wrap = styled.div`
+const Wrap = styled.div<{ display: string }>`
 	${WrapStyle}
-	display :${(props: { display: string }) => props.display};
+	display :${(props) => props.display};
 	top: 64px;
 	left: 0;
 `;
 
-const MobileInputCon = styled.div`
+const MobileInputCon = styled.div<MobileInputStyle>`
 	position: fixed;
 	left: 0;
 	top: 64px;
 	width: 100%;
 	z-index: 999;
-	display: ${(props: MobileInputStyle) => props.display};
+	display: ${(props) => props.display};
 	background-color: ${(props) => props.bgc};
 	transition: opacity 0.2s;
 
@@ -157,7 +161,6 @@ const MobileInput = styled.input`
 	background-color: inherit;
 	color: inherit;
 	outline: none;
-	/* border-bottom: 1px solid #e3e3e3; */
 `;
 
 export default NavInput;

@@ -1,17 +1,23 @@
 import styled from '@emotion/styled';
 import React, { useEffect, useState } from 'react';
-import { PageContainer, WrapStyle } from '../assets/Style/CommonStyle';
-import CategoryBar from '../Components/Common/CategoryBar';
-import EmptyCart from '../Components/Cart/EmptyCart';
-import CartItem from '../Components/Cart/CartItem';
-import TotalAcountCart from '../Components/Cart/TotalAcountCart';
-import { CartType } from '../Type/Type';
 import { useRecoilState } from 'recoil';
+//style
+import { PageContainer } from '../assets/Style/CommonStyle';
+//component
+import CategoryBar from '../Components/Common/CategoryBar';
+import CartItem from '../Components/Cart/CartItem';
+import EmptyCart from '../Components/Cart/EmptyCart';
+import TotalAcountCart from '../Components/Cart/TotalAcountCart';
+//tyep
+import { CartType } from '../Type/dataType';
+//data
 import { cartListAtom } from '../Atom/AtomStore';
-import { setLocalStorage } from '../Components/Cart/CartListHandler';
+//handler
+import { setLocalStorage } from '../Components/Cart/handleCartList';
 
 const CartPage = () => {
 	const [cartList] = useRecoilState(cartListAtom);
+	const [loading, setLoading] = useState('');
 
 	useEffect(() => {
 		return () => {
@@ -19,8 +25,16 @@ const CartPage = () => {
 		};
 	}, [cartList]);
 
+	useEffect(() => {
+		setLoading('end');
+
+		return () => {
+			setLoading('');
+		};
+	}, []);
+
 	return (
-		<Container>
+		<Container className={loading}>
 			<CategoryBar root={'Home'} currnet={'Cart'} />
 			<Cart>
 				{cartList.length > 0 ? (
@@ -37,7 +51,7 @@ const CartPage = () => {
 };
 
 const Container = styled.section`
-	${PageContainer}
+	${PageContainer};
 `;
 
 const Cart = styled.ul`

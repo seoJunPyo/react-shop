@@ -1,15 +1,17 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { FlexTemplate } from '../../assets/Style/CommonStyle';
 import { useNavigate } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
+//style icon
+import { FlexTemplate } from '../../assets/Style/CommonStyle';
+import { hoverStyle } from '../../assets/Style/darkLightColor';
+import { HiOutlineViewList } from 'react-icons/hi';
+//data
 import {
 	categoryListAtom,
 	darkLightModeAtom,
 	sideNavAtom,
 } from '../../Atom/AtomStore';
-import { HiOutlineViewList } from 'react-icons/hi';
-import { hoverStyle } from '../../assets/Style/darkLightColor';
 
 const NavHeader = () => {
 	const [categoryList] = useRecoilState(categoryListAtom);
@@ -53,7 +55,7 @@ const Header = styled.section`
 	align-items: center;
 `;
 
-const SideNavBtn = styled.button`
+const SideNavBtn = styled.button<{ hover: string }>`
 	${FlexTemplate}
 	width: 36px;
 	height: 36px;
@@ -67,7 +69,7 @@ const SideNavBtn = styled.button`
 	transform: translateY(1px);
 
 	:hover {
-		background-color: ${(props: { hover: string }) => props.hover};
+		background-color: ${(props) => props.hover};
 		transition: background-color 0.3s;
 	}
 
@@ -94,7 +96,7 @@ const List = styled.ul`
 	}
 `;
 
-const Item = styled.li`
+const Item = styled.li<{ hover: string }>`
 	${FlexTemplate}
 	font-size: 12px;
 	font-weight: 600;
@@ -103,7 +105,7 @@ const Item = styled.li`
 	padding: 12px 16px;
 
 	:hover {
-		background-color: ${(props: { hover: string }) => props.hover};
+		background-color: ${(props) => props.hover};
 		transition: background-color 0.3s;
 	}
 `;

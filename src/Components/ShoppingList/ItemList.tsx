@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 //component
 import ItemCard from './ItemCard';
 //type
-import { ShoppingListType } from '../../Type/Type';
+import { ShoppingListType } from '../../Type/dataType';
 
 interface ItemListProps {
 	key?: string;

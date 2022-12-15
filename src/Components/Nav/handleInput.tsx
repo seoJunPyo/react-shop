@@ -1,4 +1,4 @@
-import { ShoppingListType } from '../../Type/Type';
+import { ShoppingListType } from '../../Type/dataType';
 
 export const getSearchResult = (list: ShoppingListType[], keyword: string) => {
 	const regex = new RegExp(keyword, 'gi');

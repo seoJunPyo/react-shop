@@ -4,7 +4,7 @@ import { useRecoilState } from 'recoil';
 //atom
 import { cartListAtom } from '../../Atom/AtomStore';
 //function
-import { handleAmount } from './CartListHandler';
+import { handleAmount } from './handleCartList';
 //style
 import { Btn } from '../Common/Button';
 import { FlexTemplate } from '../../assets/Style/CommonStyle';
@@ -46,14 +46,14 @@ const Container = styled.div`
 	justify-content : flex-start;
 `;
 
-const Amount = styled.button`
+const Amount = styled.button<{ radius: string }>`
 	${Btn}
 	${FlexTemplate}
 	width : 40px;
 	height: 40px;
 	color: #fff;
 	background-color: #6419e6;
-	border-radius: ${(props: { radius: string }) => props.radius};
+	border-radius: ${(props) => props.radius};
 	font-size: 20px;
 	:hover {
 		background-color: #4f13b8;

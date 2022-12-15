@@ -4,7 +4,7 @@ import { useRecoilState } from 'recoil';
 import styled from '@emotion/styled';
 //atom
 import { shoppingListAtom } from '../Atom/AtomStore';
-import { ShoppingListType } from '../Type/Type';
+import { ShoppingListType } from '../Type/dataType';
 //type
 import ItemList from '../Components/ShoppingList/ItemList';
 //components
@@ -19,8 +19,9 @@ interface CategoryPage {
 
 const CategoryPage = (props: CategoryPage) => {
 	const categoryUrl = useParams();
-	const [shoppingList, setShoppingList] = useRecoilState(shoppingListAtom);
+	const [shoppingList] = useRecoilState(shoppingListAtom);
 	const [itemList, setitemList] = useState<ShoppingListType[]>([]);
+	const [loading, setLoading] = useState('');
 
 	useEffect(() => {
 		const filtered = shoppingList.filter(
@@ -29,12 +30,20 @@ const CategoryPage = (props: CategoryPage) => {
 		setitemList(filtered);
 	}, [categoryUrl]);
 
+	useEffect(() => {
+		setLoading('end');
+
+		return () => {
+			setLoading('');
+		};
+	}, []);
+
 	return (
 		<>
 			{props.isLoading ? (
 				<LoadingPage length={1} />
 			) : (
-				<Container>
+				<Container className={loading}>
 					<CategoryBar root="Home" currnet={categoryUrl.category} />
 
 					<ItemList
@@ -48,7 +57,7 @@ const CategoryPage = (props: CategoryPage) => {
 };
 
 const Container = styled.section`
-	${PageContainer}
+	${PageContainer};
 `;
 
 export default CategoryPage;

@@ -1,4 +1,4 @@
-import { ShoppingListType, CartType } from '../../Type/Type';
+import { ShoppingListType, CartType } from '../../Type/dataType';
 export const priceFormeter = (target: number): number => {
 	return Number(target.toFixed(2));
 };

@@ -70,22 +70,22 @@ interface ModalConStyle {
 	shadow: string;
 }
 
-const Wrap = styled.div`
+const Wrap = styled.div<{ visibility: string }>`
 	${WrapStyle}
 	top: 0;
 	left: 0;
-	visibility: ${(props: { visibility: string }) => props.visibility};
+	visibility: ${(props) => props.visibility};
 	z-index: 2000;
 `;
 
-const ModalCon = styled.div`
+const ModalCon = styled.div<ModalConStyle>`
 	position: absolute;
 	top: 30%;
 	left: 50%;
 	width: 500px;
 	height: 225px;
 	padding: 32px;
-	background-color: ${(props: ModalConStyle) => props.bgc};
+	background-color: ${(props) => props.bgc};
 	border-radius: 15px;
 	box-shadow: ${(props) => props.shadow};
 	transform: ${(props) => props.transform};

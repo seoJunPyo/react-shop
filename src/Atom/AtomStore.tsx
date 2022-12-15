@@ -1,8 +1,12 @@
 import exp from 'constants';
 import { atom } from 'recoil';
-import { CartType, ShoppingListType } from '../Type/Type';
+import { CartType, ShoppingListType } from '../Type/dataType';
 
 type CategoryType = string[];
+
+const init = localStorage.getItem('Cart')
+	? JSON.parse(localStorage.getItem('Cart') as string)
+	: [];
 
 export const shoppingListAtom = atom<ShoppingListType[]>({
 	key: 'shoppingList',
@@ -13,10 +17,6 @@ export const categoryListAtom = atom<CategoryType>({
 	key: 'categoryList',
 	default: [],
 });
-
-const init = localStorage.getItem('Cart')
-	? JSON.parse(localStorage.getItem('Cart') as string)
-	: [];
 
 export const cartListAtom = atom<CartType[]>({
 	key: 'cartList',
@@ -31,4 +31,9 @@ export const sideNavAtom = atom<boolean>({
 export const darkLightModeAtom = atom<boolean>({
 	key: 'darkLight',
 	default: false,
+});
+
+export const carouselLoctionAtom = atom<number>({
+	key: 'carousel',
+	default: 0,
 });

@@ -1,10 +1,13 @@
-import styled from '@emotion/styled';
 import React from 'react';
+import styled from '@emotion/styled';
 import { useNavigate } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
+//style
 import { hoverStyle, resultBgc } from '../../assets/Style/darkLightColor';
+//type
+import { ShoppingListType } from '../../Type/dataType';
+//data
 import { darkLightModeAtom } from '../../Atom/AtomStore';
-import { ShoppingListType } from '../../Type/Type';
 
 interface SearchResultProps {
 	result: ShoppingListType[];
@@ -37,14 +40,14 @@ const Container = styled.ul`
 	z-index: 1002;
 	background-color: ${(props: { bgc: string }) => props.bgc};
 `;
-const Result = styled.li`
+const Result = styled.li<{ hover: string }>`
 	padding: 16px;
 	margin-bottom: 4px;
 	border-radius: 10px;
 	cursor: pointer;
 
 	:hover {
-		background-color: ${(props: { hover: string }) => props.hover};
+		background-color: ${(props) => props.hover};
 		transition: background-color 0.2s;
 	}
 

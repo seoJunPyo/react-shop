@@ -3,7 +3,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { CommonWidth } from '../../assets/Style/CommonStyle';
 //component
-import CardArea from './CardArea';
+import CardArea from './CardIconArea';
 import SNSIconArea from './SNSIconArea';
 import { useRecoilState } from 'recoil';
 import { darkLightModeAtom } from '../../Atom/AtomStore';

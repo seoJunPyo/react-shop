@@ -1,6 +1,10 @@
+import React from 'react';
 import styled from '@emotion/styled';
-import React, { useState } from 'react';
 import { useRecoilState } from 'recoil';
+//component
+import NavHeader from './NavHeader';
+import NavInputArea from './NavInputArea';
+import SideNav from './SideNav';
 //style
 import { CommonWidth, FlexTemplate } from '../../assets/Style/CommonStyle';
 import {
@@ -8,10 +12,8 @@ import {
 	navBoxShadow,
 	navText,
 } from '../../assets/Style/darkLightColor';
+//data
 import { darkLightModeAtom } from '../../Atom/AtomStore';
-import NavHeader from './NavHeader';
-import NavInputArea from './NavInputArea';
-import SideNav from './SideNav';
 
 const Nav = () => {
 	const [darkLightMode] = useRecoilState(darkLightModeAtom);
@@ -39,12 +41,12 @@ interface NavStyle {
 }
 
 //styled Components
-const NavContainer = styled.nav`
+const NavContainer = styled.nav<NavStyle>`
 	position: sticky;
 	top: 0;
 	z-index: 1000;
 	${FlexTemplate}
-	background-color: ${(props: NavStyle) => props.bgc};
+	background-color: ${(props) => props.bgc};
 	color: ${(props) => props.color};
 	box-shadow: ${(props) => props.boxShadow};
 	transition: background-color, color 0.3s;

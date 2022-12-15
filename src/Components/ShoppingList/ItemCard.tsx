@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 //style
 import { FlexTemplate } from '../../assets/Style/CommonStyle';
 //type
-import { ShoppingListType } from '../../Type/Type';
+import { ShoppingListType } from '../../Type/dataType';
 import { cardBgc, cardBorder } from '../../assets/Style/darkLightColor';
 import { useRecoilState } from 'recoil';
 import { darkLightModeAtom } from '../../Atom/AtomStore';
@@ -15,29 +15,33 @@ interface ItemCardProps {
 
 const ItemCard = (props: ItemCardProps) => {
 	const [darkLightMode] = useRecoilState(darkLightModeAtom);
+	const navigete = useNavigate();
 
 	return (
-		<Card border={cardBorder(darkLightMode)}>
-			<Link to={`/item/${props.itemInfo.id}`}>
-				<ImgCon>
-					<Img src={props.itemInfo.image} />
-				</ImgCon>
-				<Info bgc={cardBgc(darkLightMode)}>
-					<Name>{props.itemInfo.title}</Name>
-					<Price>${props.itemInfo.price}</Price>
-				</Info>
-			</Link>
+		<Card
+			border={cardBorder(darkLightMode)}
+			onClick={() => {
+				navigete(`/item/${props.itemInfo.id}`);
+			}}>
+			<ImgCon>
+				<Img src={props.itemInfo.image} />
+			</ImgCon>
+			<Info bgc={cardBgc(darkLightMode)}>
+				<Name>{props.itemInfo.title}</Name>
+				<Price>${props.itemInfo.price}</Price>
+			</Info>
 		</Card>
 	);
 };
 
-export const Card = styled.div`
+export const Card = styled.div<{ border?: string }>`
 	border-radius: 12px;
 	overflow: hidden;
 	margin: 0 12px 24px;
 	min-width: 210px;
-	border: ${(props: { border?: string }) => props.border};
+	border: ${(props) => props.border};
 	transition: border 0.3s;
+	cursor: pointer;
 
 	@media (max-width: 1024px) {
 		flex-basis: 50%;
@@ -65,10 +69,10 @@ export const Img = styled.img`
 	min-width: 150px;
 `;
 
-export const Info = styled.div`
+export const Info = styled.div<{ bgc?: string }>`
 	padding: 32px;
 	height: 224px;
-	background-color: ${(props: { bgc?: string }) => props.bgc};
+	background-color: ${(props) => props.bgc};
 	text-align: left;
 	line-height: 1.5;
 	transition: background-color 0.3s;
