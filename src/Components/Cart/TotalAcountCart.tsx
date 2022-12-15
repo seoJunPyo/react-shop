@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useRecoilState } from 'recoil';
+import { useRecoilState, useRecoilValue } from 'recoil';
 //style
 import styled from '@emotion/styled';
 import { WrapStyle } from '../../assets/style/CommonStyle';
@@ -7,13 +7,14 @@ import { WrapStyle } from '../../assets/style/CommonStyle';
 import { GreyButton, PurpleButton } from '../Common/Button';
 import Modal from '../Common/Modal';
 //handler
-import { getTotalAcount, removerAllItem } from './handleCartList';
+import { removerAllItem } from './handleCartList';
 //data
-import { cartListAtom } from '../../Atom/AtomStore';
+import { atomCartList, getTotalAcount } from '../../Atom/AtomStore';
 import modalText from '../Common/ModalText';
 
 const TotalAcountCart = () => {
-	const [cartList, setCartList] = useRecoilState(cartListAtom);
+	const totalAcount = useRecoilValue(getTotalAcount);
+	const [cartList, setCartList] = useRecoilState(atomCartList);
 	const [modal, setModal] = useState(false);
 
 	const removeAll = () => {
@@ -42,7 +43,7 @@ const TotalAcountCart = () => {
 				text={modalText.cart}
 			/>
 			<Acount>
-				<Price>총 : ${getTotalAcount(cartList)}</Price>
+				<Price>총 : ${totalAcount}</Price>
 				<BtnCon>
 					<GreyButton onClick={removeAll}>전체삭제</GreyButton>
 					<PurpleButton

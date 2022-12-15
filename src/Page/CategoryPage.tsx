@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
 import styled from '@emotion/styled';
 //atom
-import { shoppingListAtom } from '../Atom/AtomStore';
+import { atomShoppingList } from '../Atom/AtomStore';
 import { ShoppingListType } from '../Type/dataType';
 //type
 import ItemList from '../Components/ShoppingList/ItemList';
@@ -19,7 +19,7 @@ interface CategoryPage {
 
 const CategoryPage = (props: CategoryPage) => {
 	const categoryUrl = useParams();
-	const [shoppingList] = useRecoilState(shoppingListAtom);
+	const [shoppingList] = useRecoilState(atomShoppingList);
 	const [itemList, setitemList] = useState<ShoppingListType[]>([]);
 	const [loading, setLoading] = useState('');
 

@@ -6,15 +6,15 @@ import { useRecoilState, useRecoilValue } from 'recoil';
 import { hoverStyle } from '../../assets/style/darkLightColor';
 //data
 import {
-	darkLightModeAtom,
+	atomDarkLightMode,
 	getCategoryList,
-	sideNavAtom,
+	atomSideNav,
 } from '../../Atom/AtomStore';
 
 const SideNav = () => {
 	const categoryList = useRecoilValue(getCategoryList);
-	const [sideNavState, setSideNavState] = useRecoilState(sideNavAtom);
-	const [darkLightMode] = useRecoilState(darkLightModeAtom);
+	const [sideNavState, setSideNavState] = useRecoilState(atomSideNav);
+	const [darkLightMode] = useRecoilState(atomDarkLightMode);
 	const navigate = useNavigate();
 
 	return (

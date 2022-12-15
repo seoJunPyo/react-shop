@@ -6,10 +6,10 @@ import styled from '@emotion/styled';
 import CarouselImage from './CarouselImage';
 //data
 import { CarouselData } from './CarouselData';
-import { carouselLoctionAtom } from '../../Atom/AtomStore';
+import { atomCarouselLoction } from '../../Atom/AtomStore';
 
 const CarouselMain = () => {
-	const [location] = useRecoilState(carouselLoctionAtom);
+	const [location] = useRecoilState(atomCarouselLoction);
 
 	return (
 		<CarouselCon location={`${location.toString()}%`}>

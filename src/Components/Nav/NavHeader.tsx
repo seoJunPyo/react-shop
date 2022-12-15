@@ -8,15 +8,15 @@ import { hoverStyle } from '../../assets/style/darkLightColor';
 import { HiOutlineViewList } from 'react-icons/hi';
 //data
 import {
-	darkLightModeAtom,
+	atomDarkLightMode,
 	getCategoryList,
-	sideNavAtom,
+	atomSideNav,
 } from '../../Atom/AtomStore';
 
 const NavHeader = () => {
 	const categoryList = useRecoilValue(getCategoryList);
-	const [sideNavState, setSideNavState] = useRecoilState(sideNavAtom);
-	const [darkLightMode] = useRecoilState(darkLightModeAtom);
+	const [sideNavState, setSideNavState] = useRecoilState(atomSideNav);
+	const [darkLightMode] = useRecoilState(atomDarkLightMode);
 
 	const navigate = useNavigate();
 

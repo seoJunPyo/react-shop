@@ -15,15 +15,15 @@ import CategoryPage from './Page/CategoryPage';
 import CartPage from './Page/CartPage';
 import NotFoundPage from './Page/NotFoundPage';
 //atom
-import { shoppingListAtom, darkLightModeAtom } from './Atom/AtomStore';
+import { atomShoppingList, atomDarkLightMode } from './Atom/AtomStore';
 //css
 import './App.css';
 import { bodyBgc, bodyText } from './assets/style/darkLightColor';
 
 function App() {
-	const [_, setShoppingList] = useRecoilState(shoppingListAtom);
+	const [_, setShoppingList] = useRecoilState(atomShoppingList);
 
-	const [darkLigthMode] = useRecoilState(darkLightModeAtom);
+	const [darkLigthMode] = useRecoilState(atomDarkLightMode);
 
 	const { isLoading } = useSWR('key', async () => {
 		const result = await axios.get('https://fakestoreapi.com/products');

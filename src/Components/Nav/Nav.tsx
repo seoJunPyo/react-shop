@@ -13,10 +13,10 @@ import {
 	navText,
 } from '../../assets/style/darkLightColor';
 //data
-import { darkLightModeAtom } from '../../Atom/AtomStore';
+import { atomDarkLightMode } from '../../Atom/AtomStore';
 
 const Nav = () => {
-	const [darkLightMode] = useRecoilState(darkLightModeAtom);
+	const [darkLightMode] = useRecoilState(atomDarkLightMode);
 
 	return (
 		<>

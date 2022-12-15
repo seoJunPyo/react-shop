@@ -11,14 +11,14 @@ import loadingLight from '../assets/Image/Loading_light.gif';
 import { Title, List } from '../Components/ShoppingList/ItemList';
 import { ImgCon, Card, Info } from '../Components/ShoppingList/ItemCard';
 //data
-import { darkLightModeAtom } from '../Atom/AtomStore';
+import { atomDarkLightMode } from '../Atom/AtomStore';
 
 interface LoadingPageProps {
 	length: number;
 }
 
 const LoadingPage = (props: LoadingPageProps) => {
-	const [darkLightMode] = useRecoilState(darkLightModeAtom);
+	const [darkLightMode] = useRecoilState(atomDarkLightMode);
 
 	return (
 		<Container>

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
 //atom
-import { shoppingListAtom } from '../Atom/AtomStore';
+import { atomShoppingList } from '../Atom/AtomStore';
 //type
 import { ShoppingListType } from '../Type/dataType';
 // components
@@ -15,7 +15,7 @@ import { PageContainer } from '../assets/style/CommonStyle';
 
 const DetailPage = () => {
 	const { id } = useParams();
-	const [shoppingList] = useRecoilState(shoppingListAtom);
+	const [shoppingList] = useRecoilState(atomShoppingList);
 	const [detailInfo, setDetailInfo] = useState<ShoppingListType[]>([]);
 	const [loading, setLoading] = useState('');
 

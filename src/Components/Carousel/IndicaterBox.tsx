@@ -4,12 +4,12 @@ import { useRecoilState } from 'recoil';
 import styled from '@emotion/styled';
 //data
 import { CarouselData } from './CarouselData';
-import { carouselLoctionAtom } from '../../Atom/AtomStore';
+import { atomCarouselLoction } from '../../Atom/AtomStore';
 //handler
 import { isSelected } from './handleCarousel';
 
 const IndicaterBox = () => {
-	const [location, setLocation] = useRecoilState(carouselLoctionAtom);
+	const [location, setLocation] = useRecoilState(atomCarouselLoction);
 
 	return (
 		<Container>

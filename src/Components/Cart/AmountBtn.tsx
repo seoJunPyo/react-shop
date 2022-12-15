@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { useRecoilState } from 'recoil';
 //atom
-import { cartListAtom } from '../../Atom/AtomStore';
+import { atomCartList } from '../../Atom/AtomStore';
 //function
 import { handleAmount } from './handleCartList';
 //style
@@ -15,7 +15,7 @@ interface AmountBtnProps {
 }
 
 const AmountBtn = (props: AmountBtnProps) => {
-	const [cartList, setCartList] = useRecoilState(cartListAtom);
+	const [cartList, setCartList] = useRecoilState(atomCartList);
 
 	const plus = () => {
 		const newData = handleAmount(props.id.toString(), cartList, 1);

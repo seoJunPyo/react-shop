@@ -7,7 +7,7 @@ import {
 	bodyText,
 	modalShadow,
 } from '../../assets/style/darkLightColor';
-import { darkLightModeAtom } from '../../Atom/AtomStore';
+import { atomDarkLightMode } from '../../Atom/AtomStore';
 import { GreyButton, PurpleButton } from './Button';
 
 interface ModalProps {
@@ -23,7 +23,7 @@ interface ModalProps {
 }
 
 const Modal = (props: ModalProps) => {
-	const [darkLightMode] = useRecoilState(darkLightModeAtom);
+	const [darkLightMode] = useRecoilState(atomDarkLightMode);
 
 	return (
 		<Wrap

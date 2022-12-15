@@ -6,7 +6,7 @@ import { useRecoilState } from 'recoil';
 import { PurpleButton, GreyButton } from '../Common/Button';
 import Modal from '../Common/Modal';
 //data
-import { cartListAtom, shoppingListAtom } from '../../Atom/AtomStore';
+import { atomCartList, atomShoppingList } from '../../Atom/AtomStore';
 import modalText from '../Common/ModalText';
 //handler
 import {
@@ -17,8 +17,8 @@ import {
 
 const DetailBtn = () => {
 	const { id } = useParams();
-	const [shoppingList] = useRecoilState(shoppingListAtom);
-	const [cartList, setCartList] = useRecoilState(cartListAtom);
+	const [shoppingList] = useRecoilState(atomShoppingList);
+	const [cartList, setCartList] = useRecoilState(atomCartList);
 	const [modal, setModal] = useState(false);
 	const navigate = useNavigate();
 

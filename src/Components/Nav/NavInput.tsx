@@ -17,11 +17,11 @@ import { ShoppingListType } from '../../Type/dataType';
 //handler
 import { getSearchResult } from './handleInput';
 //data
-import { darkLightModeAtom, shoppingListAtom } from '../../Atom/AtomStore';
+import { atomDarkLightMode, atomShoppingList } from '../../Atom/AtomStore';
 
 const NavInput = () => {
-	const [shoppingList] = useRecoilState(shoppingListAtom);
-	const [darkLightMode] = useRecoilState(darkLightModeAtom);
+	const [shoppingList] = useRecoilState(atomShoppingList);
+	const [darkLightMode] = useRecoilState(atomDarkLightMode);
 
 	const [searchKeyword, setserchKeyword] = useState('');
 	const [result, setResult] = useState<ShoppingListType[]>([]);

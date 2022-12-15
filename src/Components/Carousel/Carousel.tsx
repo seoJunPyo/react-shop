@@ -9,12 +9,12 @@ import CarouselMain from './CarouselMain';
 import IndicaterBox from './IndicaterBox';
 //data
 import { CarouselData } from './CarouselData';
-import { carouselLoctionAtom } from '../../Atom/AtomStore';
+import { atomCarouselLoction } from '../../Atom/AtomStore';
 //handler
 import { getLastLoction, isLast } from './handleCarousel';
 
 const Carousel = () => {
-	const [location, setLocation] = useRecoilState(carouselLoctionAtom);
+	const [location, setLocation] = useRecoilState(atomCarouselLoction);
 
 	const handleLeftMoveClick = () => {
 		if (location === 0) {

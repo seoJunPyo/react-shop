@@ -6,7 +6,7 @@ import {
 	btnHoverBgc,
 	btnHoverColor,
 } from '../../assets/style/darkLightColor';
-import { darkLightModeAtom } from '../../Atom/AtomStore';
+import { atomDarkLightMode } from '../../Atom/AtomStore';
 
 interface BtnProps {
 	children: string;
@@ -19,7 +19,7 @@ export const PurpleButton = (props: BtnProps) => {
 };
 
 export const GreyButton = (props: BtnProps) => {
-	const [darkLightMode] = useRecoilState(darkLightModeAtom);
+	const [darkLightMode] = useRecoilState(atomDarkLightMode);
 
 	return (
 		<BtnGray

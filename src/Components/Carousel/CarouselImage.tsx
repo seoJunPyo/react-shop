@@ -11,7 +11,7 @@ import {
 	carouselText,
 } from '../../assets/style/darkLightColor';
 //data
-import { darkLightModeAtom } from '../../Atom/AtomStore';
+import { atomDarkLightMode } from '../../Atom/AtomStore';
 
 interface CarouselImageProps {
 	info: {
@@ -31,7 +31,7 @@ interface CarouselStyle {
 
 const CarouselImage = (props: CarouselImageProps) => {
 	const navigate = useNavigate();
-	const [darkLightMode] = useRecoilState(darkLightModeAtom);
+	const [darkLightMode] = useRecoilState(atomDarkLightMode);
 
 	return (
 		<Container>

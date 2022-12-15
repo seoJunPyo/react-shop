@@ -54,24 +54,6 @@ export const removerAllItem = () => {
 	return [];
 };
 
-// 총액 계산기
-export const getTotalAcount = (list: CartType[]) => {
-	const total = list.reduce((a, c) => {
-		return (a += c.amount * c.price);
-	}, 0);
-
-	return priceFormeter(total);
-};
-
-// 총 갯수 계산기
-export const getTotalAmount = (list: CartType[]) => {
-	const total = list.reduce((a, c) => {
-		return (a += c.amount);
-	}, 0);
-
-	return total;
-};
-
 // 로컬 스토리지에 cart 정보 저장
 export const setLocalStorage = (list: CartType[]) => {
 	localStorage.removeItem('Cart');

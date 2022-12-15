@@ -7,14 +7,14 @@ import { FlexTemplate } from '../../assets/style/CommonStyle';
 import { ShoppingListType } from '../../Type/dataType';
 import { cardBgc, cardBorder } from '../../assets/style/darkLightColor';
 import { useRecoilState } from 'recoil';
-import { darkLightModeAtom } from '../../Atom/AtomStore';
+import { atomDarkLightMode } from '../../Atom/AtomStore';
 
 interface ItemCardProps {
 	itemInfo: ShoppingListType;
 }
 
 const ItemCard = (props: ItemCardProps) => {
-	const [darkLightMode] = useRecoilState(darkLightModeAtom);
+	const [darkLightMode] = useRecoilState(atomDarkLightMode);
 	const navigete = useNavigate();
 
 	return (

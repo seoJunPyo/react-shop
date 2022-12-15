@@ -7,7 +7,7 @@ import { hoverStyle, resultBgc } from '../../assets/style/darkLightColor';
 //type
 import { ShoppingListType } from '../../Type/dataType';
 //data
-import { darkLightModeAtom } from '../../Atom/AtomStore';
+import { atomDarkLightMode } from '../../Atom/AtomStore';
 
 interface SearchResultProps {
 	result: ShoppingListType[];
@@ -16,7 +16,7 @@ interface SearchResultProps {
 
 const SearchResultMobile = (props: SearchResultProps) => {
 	const navigate = useNavigate();
-	const [darkLightMode] = useRecoilState(darkLightModeAtom);
+	const [darkLightMode] = useRecoilState(atomDarkLightMode);
 
 	return (
 		<Container bgc={resultBgc(darkLightMode)}>

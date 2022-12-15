@@ -11,12 +11,12 @@ import TotalAcountCart from '../Components/Cart/TotalAcountCart';
 //tyep
 import { CartType } from '../Type/dataType';
 //data
-import { cartListAtom } from '../Atom/AtomStore';
+import { atomCartList } from '../Atom/AtomStore';
 //handler
 import { setLocalStorage } from '../Components/Cart/handleCartList';
 
 const CartPage = () => {
-	const [cartList] = useRecoilState(cartListAtom);
+	const [cartList] = useRecoilState(atomCartList);
 	const [loading, setLoading] = useState('');
 
 	useEffect(() => {

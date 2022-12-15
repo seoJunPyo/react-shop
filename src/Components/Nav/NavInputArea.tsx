@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { useNavigate } from 'react-router-dom';
-import { useRecoilState } from 'recoil';
+import { useRecoilState, useRecoilValue } from 'recoil';
 //style icon
 import { BiShoppingBag } from 'react-icons/bi';
 import { BsSun, BsMoon } from 'react-icons/bs';
@@ -9,15 +9,13 @@ import { Button, FlexTemplate } from '../../assets/style/CommonStyle';
 import { hoverStyle } from '../../assets/style/darkLightColor';
 //component
 import NavInput from './NavInput';
-//handler
-import { getTotalAmount } from '../Cart/handleCartList';
 //data
-import { cartListAtom, darkLightModeAtom } from '../../Atom/AtomStore';
+import { atomDarkLightMode, getTotalAmount } from '../../Atom/AtomStore';
 
 const NavInputArea = () => {
-	const [cartList] = useRecoilState(cartListAtom);
 	const navigate = useNavigate();
-	const [darkLightMode, setDarkLightMode] = useRecoilState(darkLightModeAtom);
+	const [darkLightMode, setDarkLightMode] = useRecoilState(atomDarkLightMode);
+	const totalAmount = useRecoilValue(getTotalAmount);
 
 	const toCart = () => {
 		navigate('/cart');
@@ -36,7 +34,7 @@ const NavInputArea = () => {
 			</InputDiv>
 			<CartBtn hover={hoverStyle(darkLightMode)} onClick={toCart}>
 				<BiShoppingBag />
-				<ItemCountBage>{getTotalAmount(cartList)}</ItemCountBage>
+				<ItemCountBage>{totalAmount}</ItemCountBage>
 			</CartBtn>
 		</InputArea>
 	);

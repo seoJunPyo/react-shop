@@ -6,11 +6,11 @@ import { CommonWidth } from '../../assets/style/CommonStyle';
 import CardArea from './CardIconArea';
 import SNSIconArea from './SNSIconArea';
 import { useRecoilState } from 'recoil';
-import { darkLightModeAtom } from '../../Atom/AtomStore';
+import { atomDarkLightMode } from '../../Atom/AtomStore';
 import { footerBgc, footerText } from '../../assets/style/darkLightColor';
 
 const Footer = () => {
-	const [darkLightMode] = useRecoilState(darkLightModeAtom);
+	const [darkLightMode] = useRecoilState(atomDarkLightMode);
 
 	return (
 		<Container bgc={footerBgc(darkLightMode)} color={footerText(darkLightMode)}>
