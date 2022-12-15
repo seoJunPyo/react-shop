@@ -54,7 +54,7 @@ body {
 	line-height: 1;
 	height: 100%;
 	font-family: 'Kanit', sans-serif;
-	letter-spacing: 0.02rem;
+	letter-spacing: 0.01em;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-ms-user-select: none;
