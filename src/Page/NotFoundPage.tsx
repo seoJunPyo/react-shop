@@ -17,10 +17,10 @@ const NotFoundPage = () => {
 
 const Container = styled.section`
 	${PageContainer}
-	padding : 120px 30px;
 `;
 
 const Title = styled.h2`
+	padding: 48px;
 	display: flex;
 	align-items: center;
 	font-size: 72px;
@@ -29,6 +29,7 @@ const Title = styled.h2`
 `;
 
 const Text = styled.p`
+	padding: 48px;
 	font-size: 36px;
 `;
 

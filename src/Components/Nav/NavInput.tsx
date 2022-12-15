@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import { grey } from '@mui/material/colors';
 import React, { useEffect, useState, useRef, LegacyRef } from 'react';
 import { BiSearch } from 'react-icons/bi';
+import { useParams } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
 import {
 	Button,
@@ -39,23 +40,18 @@ const NavInput = () => {
 		setWrap(false);
 	};
 
-	const searBtnClick = () => {
+	const searchBtnClick = () => {
 		setMobileInputState(!mobileInputState);
 		setWrap(!wrap);
 		setserchKeyword('');
 	};
 
-	const wrapClick = () => {
-		setWrap(!wrap);
-		setMobileInputState(false);
-	};
-
 	return (
 		<>
-			<SearchBtn hover={hoverStyle(darkLightMode)} onClick={searBtnClick}>
+			<SearchBtn hover={hoverStyle(darkLightMode)} onClick={searchBtnClick}>
 				<BiSearch />
 			</SearchBtn>
-			<Wrap display={wrap ? 'block' : 'none'} onClick={wrapClick} />
+			<Wrap display={wrap ? 'block' : 'none'} onClick={reset} />
 
 			{/* 일반 인풋 */}
 			<InputCon>

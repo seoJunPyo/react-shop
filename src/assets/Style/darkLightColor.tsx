@@ -32,7 +32,7 @@ export const carouselText = (boolen: boolean): string => {
 
 //body
 export const bodyText = (boolen: boolean): string => {
-	return boolen ? '#fff' : '#1f2937';
+	return boolen ? '#a6adba' : '#1f2937';
 };
 export const bodyBgc = (boolen: boolean): string => {
 	return boolen ? '#2a303c' : '#fff';
@@ -71,4 +71,11 @@ export const btnHoverColor = (boolen: boolean): string => {
 };
 export const btnHoverBgc = (boolen: boolean): string => {
 	return boolen ? '#a6adba' : '#1f2937';
+};
+
+// modal
+export const modalShadow = (boolen: boolean): string => {
+	return boolen
+		? '3px 3px 10px 4px rgba(166, 173, 186, 0.2)'
+		: '3px 3px 10px 4px rgba(31,41,55,0.2)';
 };

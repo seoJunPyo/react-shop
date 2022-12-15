@@ -46,7 +46,7 @@ const BtnPurple = styled.button`
 	background-color: #6419e6;
 
 	:hover {
-		background-color: #4f13b8;
+		background-color: #4a12ab;
 		transition: background-color 0.2s;
 	}
 `;
@@ -67,5 +67,6 @@ const BtnGray = styled.button`
 	:hover {
 		background-color: ${(props) => props.bgc};
 		color: ${(props) => props.hover};
+		transition: all 0.2s;
 	}
 `;

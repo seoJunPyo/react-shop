@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import React, { useEffect } from 'react';
-import { PageContainer } from '../assets/Style/CommonStyle';
+import React, { useEffect, useState } from 'react';
+import { PageContainer, WrapStyle } from '../assets/Style/CommonStyle';
 import CategoryBar from '../Components/Common/CategoryBar';
 import EmptyCart from '../Components/Cart/EmptyCart';
 import CartItem from '../Components/Cart/CartItem';

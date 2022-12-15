@@ -74,7 +74,6 @@ const Body = styled.div`
 	background-color: ${(props: BodyStyle) => props.bgc};
 	color: ${(props) => props.color};
 	transition: all 0.3s;
-	height: 100%;
 `;
 
 export default App;
