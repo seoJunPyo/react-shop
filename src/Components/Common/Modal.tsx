@@ -7,7 +7,7 @@ import {
 	bodyText,
 	modalShadow,
 } from '../../assets/style/darkLightColor';
-import { cartListAtom, darkLightModeAtom } from '../../Atom/AtomStore';
+import { darkLightModeAtom } from '../../Atom/AtomStore';
 import { GreyButton, PurpleButton } from './Button';
 
 interface ModalProps {

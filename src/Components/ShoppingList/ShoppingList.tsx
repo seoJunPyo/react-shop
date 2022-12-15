@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
 //libray
-import { useRecoilState } from 'recoil';
+import { useRecoilState, useRecoilValue } from 'recoil';
 //atom
-import { shoppingListAtom, categoryListAtom } from '../../Atom/AtomStore';
+import { shoppingListAtom, getCategoryList } from '../../Atom/AtomStore';
 //conponents
 import ItemList from './ItemList';
 //type
@@ -12,7 +12,7 @@ import { CommonWidth } from '../../assets/style/CommonStyle';
 
 const ShoppingList = () => {
 	const [shoppingList] = useRecoilState(shoppingListAtom);
-	const [categoryList] = useRecoilState(categoryListAtom);
+	const categoryList = useRecoilValue(getCategoryList);
 
 	return (
 		<Container>

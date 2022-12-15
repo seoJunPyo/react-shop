@@ -1,20 +1,20 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { useNavigate } from 'react-router-dom';
-import { useRecoilState } from 'recoil';
+import { useRecoilState, useRecoilValue } from 'recoil';
 //style icon
 import { FlexTemplate } from '../../assets/style/CommonStyle';
 import { hoverStyle } from '../../assets/style/darkLightColor';
 import { HiOutlineViewList } from 'react-icons/hi';
 //data
 import {
-	categoryListAtom,
 	darkLightModeAtom,
+	getCategoryList,
 	sideNavAtom,
 } from '../../Atom/AtomStore';
 
 const NavHeader = () => {
-	const [categoryList] = useRecoilState(categoryListAtom);
+	const categoryList = useRecoilValue(getCategoryList);
 	const [sideNavState, setSideNavState] = useRecoilState(sideNavAtom);
 	const [darkLightMode] = useRecoilState(darkLightModeAtom);
 
