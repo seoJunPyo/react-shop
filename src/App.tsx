@@ -1,11 +1,9 @@
 //libray
 import { Routes, Route } from 'react-router-dom';
-import { useRecoilState, useRecoilValue } from 'recoil';
+import { useRecoilState } from 'recoil';
 import axios from 'axios';
 import useSWR from 'swr';
 import styled from '@emotion/styled';
-//type
-import { ShoppingListType } from './Type/dataType';
 //component & page
 import Nav from './Components/Nav/Nav';
 import Footer from './Components/Footer/Footer';
